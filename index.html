@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lítio e energia | Baterias, armazenamento e o Vale do Lítio no Brasil</title>
+<meta name="description" content="O guia completo sobre lítio e energia: baterias, tecnologias, armazenamento solar, carros elétricos, reciclagem e a produção no Vale do Jequitinhonha, em Minas Gerais.">
+<meta name="theme-color" content="#0E7490">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Lítio Energia","url":"https://litioenergia.com.br/","inLanguage":"pt-BR","description":"Guia completo sobre lítio, baterias e transição energética no Brasil."}
+</script>
+<style>
+:root{--cor:#0E7490;--cor-escura:#134E4A;--verde:#65A30D;--ouro:#D97706;--texto:#1E293B;--mu:#5B6B7E;--suave:#F0F7F6;--borda:#D9E4E7;--fundo:#FFFFFF;--card:#FFFFFF;--sombra:0 6px 24px rgba(15,23,42,.07)}
+@media(prefers-color-scheme:dark){:root:not([data-tema="claro"]){--texto:#E6EEF2;--mu:#9FB2BE;--suave:#0F1F24;--borda:#1F3840;--fundo:#0A1417;--card:#122228;--sombra:0 6px 24px rgba(0,0,0,.35);--cor:#38BDF8;--verde:#A3E635}}
+:root[data-tema="escuro"]{--texto:#E6EEF2;--mu:#9FB2BE;--suave:#0F1F24;--borda:#1F3840;--fundo:#0A1417;--card:#122228;--sombra:0 6px 24px rgba(0,0,0,.35);--cor:#38BDF8;--verde:#A3E635}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font:400 16px/1.7 "Source Sans 3",system-ui,sans-serif;color:var(--texto);background:var(--fundo)}
+h1,h2,h3,.marca,.btn,nav a,.num{font-family:Manrope,system-ui,sans-serif}
+h1,h2,h3{line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}h1{font-size:clamp(2.2rem,5.5vw,3.8rem)}h2{font-size:clamp(1.6rem,3.2vw,2.3rem)}h3{font-size:1.15rem}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0;scroll-margin-top:70px}section.alt{background:var(--suave)}
+p{margin:0 0 14px}.lead{font-size:1.15rem;color:var(--mu);max-width:64ch}.pequeno{font-size:.88rem;color:var(--mu)}
+:focus-visible{outline:3px solid var(--cor);outline-offset:2px}
+.topo{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--fundo) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--borda)}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:62px}
+.marca{font-weight:800;color:var(--texto);text-decoration:none;display:flex;align-items:center;gap:8px}
+.marca i{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--cor),var(--verde));display:inline-block}
+nav.menu{display:flex;gap:16px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}nav.menu a{color:var(--texto);text-decoration:none;font-size:.95rem;font-weight:600}nav.menu a:hover{color:var(--cor)}
+#tema{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--borda);background:var(--card);color:var(--texto);cursor:pointer;font-size:1rem}
+.hero{padding:96px 0 88px;background:radial-gradient(1200px 500px at 85% -10%,rgba(101,163,13,.35),transparent 60%),linear-gradient(130deg,var(--cor),var(--cor-escura));color:#fff}
+.hero .lead{color:rgba(255,255,255,.92)}
+.selo{display:inline-block;border:1px solid rgba(255,255,255,.55);padding:5px 14px;border-radius:99px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;cursor:pointer;border:2px solid transparent;font-size:1rem}
+.btn.p{background:#fff;color:#0B4F5C}.btn.s{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+.acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero-stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:48px}
+.hero-stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:16px}
+.hero-stats b{display:block;font-family:Manrope,sans-serif;font-size:1.6rem}.hero-stats span{font-size:.9rem;opacity:.9}
+.grade{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.cartao{background:var(--card);border:1px solid var(--borda);border-radius:16px;padding:24px;box-shadow:var(--sombra)}
+.cartao p{color:var(--mu);margin:0}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--suave);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px;border:1px solid var(--borda)}
+.num{font-weight:800;color:var(--cor);font-size:1.8rem;line-height:1;margin-bottom:6px}
+.duas{display:grid;gap:34px;grid-template-columns:1fr}@media(min-width:880px){.duas{grid-template-columns:1fr 1fr;align-items:start}}
+.caixa{background:var(--card);border:1px solid var(--borda);border-radius:16px;padding:26px;box-shadow:var(--sombra)}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem;margin-bottom:14px}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid var(--borda);border-radius:10px;background:var(--fundo);color:var(--texto);width:100%}
+input[type=range]{padding:0;accent-color:var(--cor)}
+.res{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin-top:18px}
+.res div{background:var(--suave);border-radius:12px;padding:14px;border:1px solid var(--borda)}.res b{display:block;font-family:Manrope,sans-serif;font-size:1.45rem;color:var(--cor)}.res span{font-size:.88rem;color:var(--mu)}
+.tabelas{overflow-x:auto;border-radius:14px;border:1px solid var(--borda);background:var(--card);box-shadow:var(--sombra)}
+table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:620px}
+th,td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--borda);vertical-align:top}th{background:var(--cor);color:#fff;font-family:Manrope,sans-serif}tr:last-child td{border-bottom:0}
+.barras{display:grid;gap:12px;margin-top:10px}
+.barra-linha{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;font-size:.95rem}
+.trilha{height:14px;border-radius:99px;background:var(--borda);overflow:hidden}.trilha i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--cor),var(--verde));transition:width .8s}
+.tempo{position:relative;margin:24px 0;padding-left:26px;border-left:3px solid var(--borda)}
+.tempo li{list-style:none;margin:0 0 22px;position:relative}.tempo li::before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--cor);border:3px solid var(--fundo)}
+.tempo b{font-family:Manrope,sans-serif;color:var(--cor);font-size:1.05rem}
+.cadeia{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));counter-reset:c}
+.cadeia div{background:var(--card);border:1px solid var(--borda);padding:20px;position:relative;margin:-1px}
+.cadeia div b{font-family:Manrope,sans-serif;color:var(--cor)}.cadeia small{display:block;color:var(--mu);margin-top:6px}
+.mapa{width:100%;height:auto;background:var(--card);border:1px solid var(--borda);border-radius:16px;padding:12px}
+.mapa text{font:600 13px Manrope,sans-serif;fill:var(--texto)}
+.aviso{border-left:4px solid var(--ouro);background:color-mix(in srgb,var(--ouro) 10%,var(--fundo));padding:16px 18px;border-radius:10px;margin-top:20px}
+.busca{width:100%;padding:13px 16px;font-size:1rem;border-radius:12px;margin-bottom:18px}
+.termos{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.termo{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:16px}.termo b{color:var(--cor);font-family:Manrope,sans-serif}.termo p{margin:6px 0 0;color:var(--mu);font-size:.95rem}
+details{background:var(--card);border:1px solid var(--borda);border-radius:12px;padding:16px 18px;margin-bottom:12px}details summary{cursor:pointer;font-family:Manrope,sans-serif;font-weight:700;list-style:none}details p{margin:10px 0 0;color:var(--mu)}
+.quiz-pergunta{font-weight:700;margin-bottom:10px}.opcoes{display:grid;gap:8px}
+.opcao{text-align:left;padding:12px 14px;border:1px solid var(--borda);border-radius:10px;background:var(--fundo);color:var(--texto);cursor:pointer;font:inherit}
+.opcao.certa{background:#DCFCE7;border-color:#16A34A;color:#14532D}.opcao.errada{background:#FEE2E2;border-color:#DC2626;color:#7F1D1D}
+.feedback{margin-top:12px;font-weight:600;min-height:1.5em}
+.botao{padding:12px 20px;border-radius:10px;border:0;background:var(--cor);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.botao:disabled{opacity:.5;cursor:default}
+.form{display:grid;gap:4px}
+.formfoot{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.lgpd{display:flex;gap:8px;align-items:flex-start;font-size:.88rem;color:var(--mu);font-weight:400}.lgpd input{width:auto;margin-top:5px}
+.fontes li{margin-bottom:8px;color:var(--mu)}.fontes{padding-left:20px}
+.rodape{padding:40px 0;background:#0B1B20;color:#B8C7CF;font-size:.92rem}.rodape a{color:#fff}.rodape p{margin:4px 0}
+.voltar{position:fixed;right:18px;bottom:18px;background:var(--cor);color:#fff;border:0;border-radius:99px;padding:10px 16px;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.voltar.on{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topo"><div class="wrap barra">
+  <a class="marca" href="#inicio"><i></i>Lítio Energia</a>
+  <nav class="menu" aria-label="Principal">
+    <a href="#papel">O papel</a><a href="#simulador">Simulador</a><a href="#tecnologias">Tecnologias</a><a href="#cadeia">Cadeia</a><a href="#brasil">Brasil</a><a href="#linha">Linha do tempo</a><a href="#faq">Dúvidas</a><a href="#glossario">Glossário</a><a href="#quiz">Quiz</a><a href="#fontes">Fontes</a><a href="#contato">Contato</a>
+  </nav>
+  <button id="tema" aria-label="Alternar tema claro e escuro">◐</button>
+</div></header>
+
+<main>
+<section id="inicio" class="hero"><div class="wrap">
+  <span class="selo">Transição energética</span>
+  <h1>O lítio por trás da energia limpa</h1>
+  <p class="lead">Ele guarda a energia do sol e do vento, move carros elétricos e está no bolso de bilhões de pessoas. Aqui você entende como funciona, quanto custa, onde está e quais são os desafios do metal que mudou a forma de armazenar energia.</p>
+  <div class="acoes"><a class="btn p" href="#simulador">Testar o simulador</a><a class="btn s" href="#brasil">Ver o Brasil</a></div>
+  <div class="hero-stats">
+    <div><b>3</b><span>Pesquisadores premiados com o Nobel de Química de 2019 pelas baterias de lítio</span></div>
+    <div><b>~944 mil t</b><span>Concentrado de lítio produzido no Brasil em 2024</span></div>
+    <div><b>Vale do Jequitinhonha</b><span>Região que concentra a produção brasileira, em Minas Gerais</span></div>
+    <div><b>R$ 6,3 bi</b><span>Investimentos estimados no programa Vale do Lítio</span></div>
+  </div>
+</div></section>
+
+<section id="papel"><div class="wrap">
+  <h2>Por que o lítio importa</h2>
+  <p class="lead">O lítio é o metal mais leve da tabela periódica e tem um alto potencial eletroquímico. Essa combinação faz dele o núcleo das baterias recarregáveis, que hoje dominam a eletrônica portátil e avançam rapidamente nos carros e nas redes elétricas.</p>
+  <div class="grade" style="margin-top:30px">
+    <article class="cartao"><div class="ico">🚗</div><h3>Mobilidade elétrica</h3><p>Carros, ônibus e motos elétricos dependem de baterias de íon-lítio para ter autonomia e desempenho.</p></article>
+    <article class="cartao"><div class="ico">☀️</div><h3>Armazenamento solar e eólico</h3><p>Sol e vento variam ao longo do dia. As baterias guardam a energia gerada e a entregam nos horários de pico.</p></article>
+    <article class="cartao"><div class="ico">📱</div><h3>Eletrônicos</h3><p>Celulares, notebooks, ferramentas elétricas e equipamentos médicos portáteis usam baterias de lítio.</p></article>
+    <article class="cartao"><div class="ico">🏠</div><h3>Energia residencial</h3><p>Sistemas de bateria para casas e empresas permitem usar energia solar à noite e reduzir a dependência da rede.</p></article>
+  </div>
+</div></section>
+
+<section id="simulador" class="alt"><div class="wrap">
+  <h2>Simuladores</h2>
+  <p class="lead">Faça contas simples com seus números. Os resultados são estimativas para entender a ordem de grandeza.</p>
+  <div class="duas" style="margin-top:28px">
+    <div class="caixa">
+      <h3>1. Autonomia de um carro elétrico</h3>
+      <label>Capacidade da bateria (kWh)<input id="cb" type="range" min="20" max="120" value="60"><span id="cbv" class="pequeno"></span></label>
+      <label>Consumo médio (kWh por 100 km)<input id="cc" type="range" min="10" max="25" step="0.5" value="16"><span id="ccv" class="pequeno"></span></label>
+      <label>Reserva de segurança (%)<input id="cr" type="range" min="0" max="30" value="10"><span id="crv" class="pequeno"></span></label>
+      <div class="res">
+        <div><b id="auto">—</b><span>autonomia estimada (km)</span></div>
+        <div><b id="util">—</b><span>energia útil (kWh)</span></div>
+      </div>
+    </div>
+    <div class="caixa">
+      <h3>2. Bateria para uma casa com solar</h3>
+      <label>Consumo diário da casa (kWh)<input id="sc" type="range" min="2" max="30" step="0.5" value="8"><span id="scv" class="pequeno"></span></label>
+      <label>Dias de autonomia desejados<input id="sd" type="range" min="1" max="3" value="1"><span id="sdv" class="pequeno"></span></label>
+      <label>Profundidade de descarga (%)<input id="sp" type="range" min="50" max="95" value="90"><span id="spv" class="pequeno"></span></label>
+      <div class="res">
+        <div><b id="bat">—</b><span>capacidade necessária (kWh)</span></div>
+        <div><b id="cus">—</b><span>referência de custo (R$), com preço de ilustração</span></div>
+      </div>
+      <p class="pequeno" style="margin-top:12px">O custo usa R$ 2.000 por kWh de bateria, valor de ilustração. Consulte fornecedores para preços reais.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="tecnologias"><div class="wrap">
+  <h2>Tecnologias de bateria</h2>
+  <p class="lead">Nem todas as baterias de lítio são iguais. A química escolhida muda custo, segurança, durabilidade e aplicação.</p>
+  <div class="tabelas" style="margin-top:26px"><table>
+    <thead><tr><th>Tecnologia</th><th>Vantagem</th><th>Limitação</th><th>Uso típico</th></tr></thead>
+    <tbody>
+      <tr><td><b>Íon-lítio com níquel, manganês e cobalto (NMC)</b></td><td>Alta densidade de energia; carros de longa autonomia</td><td>Depende de cobalto e níquel, com custo e impacto ambiental</td><td>Carros elétricos premium e eletrônicos</td></tr>
+      <tr><td><b>Lítio-ferro-fosfato (LFP)</b></td><td>Mais segura, durável e sem cobalto</td><td>Menor densidade de energia, o que pesa mais</td><td>Armazenamento em rede e carros de entrada</td></tr>
+      <tr><td><b>Sódio-íon</b></td><td>Não usa lítio; matéria-prima abundante e barata</td><td>Menor densidade de energia; tecnologia mais recente</td><td>Alternativa em desenvolvimento para armazenamento</td></tr>
+      <tr><td><b>Estado sólido</b></td><td>Teoricamente mais segura e com mais energia</td><td>Ainda em desenvolvimento e com custo elevado</td><td>Protótipos e pesquisas avançadas</td></tr>
+    </tbody>
+  </table></div>
+  <p class="pequeno" style="margin-top:12px">Comparação simplificada para fins informativos. Desempenho e custo mudam com a evolução da tecnologia.</p>
+</div></section>
+
+<section id="cadeia" class="alt"><div class="wrap">
+  <h2>A cadeia do lítio</h2>
+  <p class="lead">Do solo ao carro, o lítio passa por várias etapas. Cada uma agrega valor e gera empregos em lugares diferentes.</p>
+  <div class="cadeia" style="margin-top:28px">
+    <div><b>1. Extração</b><small>Mineração de rocha (pegmatitos) ou bombeamento de salmoura em regiões desérticas.</small></div>
+    <div><b>2. Concentração</b><small>Obtenção do concentrado de espodumênio, a forma mais exportada.</small></div>
+    <div><b>3. Refino</b><small>Transformação em carbonato ou hidróxido de lítio, com grau de pureza para baterias.</small></div>
+    <div><b>4. Células</b><small>Fabricação das células de bateria, com eletrodos e eletrólito.</small></div>
+    <div><b>5. Montagem</b><small>Módulos e pacotes de bateria para carros, casas e redes elétricas.</small></div>
+    <div><b>6. Fim de vida</b><small>Reciclagem para recuperar lítio, níquel, cobalto e outros materiais.</small></div>
+  </div>
+  <div class="aviso"><b>Onde o valor aparece:</b> as etapas de refino, fabricação de células e montagem são as que mais geram renda e empregos qualificados. Exportar apenas o concentrado deixa grande parte desse valor fora do país.</div>
+</div></section>
+
+<section id="brasil"><div class="wrap">
+  <h2>O Brasil e o Vale do Lítio</h2>
+  <p class="lead">A maior parte do lítio brasileiro está no Vale do Jequitinhonha, no norte de Minas Gerais. A região passou a responder por praticamente toda a produção nacional da cadeia de concentrado.</p>
+  <div class="duas" style="margin-top:28px">
+    <div>
+      <svg class="mapa" viewBox="0 0 520 380" role="img" aria-label="Esquema do Vale do Jequitinhonha em Minas Gerais com municípios citados">
+        <rect x="6" y="6" width="508" height="368" rx="14" fill="none" stroke="currentColor" opacity=".15"/>
+        <path d="M70 90 C140 40,260 50,330 70 S470 120,480 200 S420 320,300 340 S150 350,90 290 S40 150,70 90Z" fill="var(--suave)" stroke="var(--cor)" stroke-width="2"/>
+        <text x="60" y="30">Minas Gerais (esquema ilustrativo)</text>
+        <circle cx="250" cy="200" r="9" fill="var(--ouro)"/><text x="268" y="204">Araçuaí</text>
+        <circle cx="215" cy="240" r="9" fill="var(--verde)"/><text x="232" y="244">Itinga</text>
+        <circle cx="330" cy="150" r="7" fill="var(--cor)"/><text x="344" y="154">Teófilo Otoni</text>
+        <circle cx="190" cy="150" r="7" fill="var(--cor)"/><text x="130" y="140">Capelinha</text>
+        <text x="60" y="352" class="pequeno" style="font-size:12px">Mapa ilustrativo, sem escala. Pontos aproximados.</text>
+      </svg>
+    </div>
+    <div>
+      <div class="res" style="margin-top:0">
+        <div><b>~944 mil t</b><span>concentrado produzido em 2024</span></div>
+        <div><b>Araçuaí e Itinga</b><span>principais municípios produtores</span></div>
+        <div><b>14 municípios</b><span>no Vale do Lítio, iniciativa de 2023</span></div>
+        <div><b>R$ 6,3 bi</b><span>investimentos estimados no programa</span></div>
+      </div>
+      <p style="margin-top:18px">O programa Vale do Lítio, lançado pelo governo de Minas Gerais em 2023, reúne ações de infraestrutura, qualificação profissional, tecnologia e desenvolvimento regional. Empresas como a Companhia Brasileira de Lítio (CBL) e a Sigma Lithium atuam na região.</p>
+      <p class="pequeno">Os dados de produção e investimento vêm de fontes públicas e mudam com frequência. Confira a fonte mais recente antes de usar.</p>
+    </div>
+  </div>
+  <div class="aviso"><b>Debate local:</b> pesquisadores e moradores discutem impactos sobre água, solo e comunidades, além de questões de transparência, participação e a distribuição dos ganhos. O valor agregado, que hoje sai do país, é um dos pontos centrais da discussão.</div>
+</div></section>
+
+<section id="linha" class="alt"><div class="wrap">
+  <h2>Linha do tempo</h2>
+  <ol class="tempo" style="padding-left:0;border:0;margin-left:10px">
+    <li style="padding-left:0"><b>1970s</b><p>Pesquisas iniciais em baterias de lítio, com o desenvolvimento de cátodos e eletrólitos.</p></li>
+    <li><b>1980s</b><p>Estudos avançados levam à viabilidade da bateria de íon-lítio, que mais tarde seria comercializada.</p></li>
+    <li><b>1991</b><p>A Sony comercializa a primeira bateria de íon-lítio em larga escala para eletrônicos.</p></li>
+    <li><b>2019</b><p>John Goodenough, M. Stanley Whittingham e Akira Yoshino recebem o Nobel de Química pelo desenvolvimento das baterias de lítio.</p></li>
+    <li><b>2023</b><p>Minas Gerais lança o programa Vale do Lítio, com 14 municípios envolvidos.</p></li>
+    <li><b>2024</b><p>A produção brasileira de concentrado de lítio chega a cerca de 944 mil toneladas.</p></li>
+    <li><b>2026</b><p>O Vale do Jequitinhonha passa a responder por praticamente toda a produção nacional de concentrado.</p></li>
+  </ol>
+  <p class="pequeno">Datas simplificadas para fins de contexto. Consulte fontes especializadas para detalhes históricos.</p>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Perguntas frequentes</h2>
+  <details open><summary>As baterias de lítio são seguras?</summary><p>Sim, quando são bem projetadas e usadas corretamente. Podem pegar fogo se forem danificadas, sobreaquecidas ou carregadas de forma inadequada. Químicas como a LFP são mais estáveis termicamente.</p></details>
+  <details><summary>Quanto tempo uma bateria de lítio dura?</summary><p>Depende da química, do uso e das condições de temperatura. Muitas baterias de carros elétricos são projetadas para milhares de ciclos de carga e descarga, mas a capacidade diminui com o tempo.</p></details>
+  <details><summary>O lítio é raro?</summary><p>Não é um mineral raro na crosta terrestre, mas as jazidas economicamente viáveis são concentradas em poucos países. A produção exige investimento e licenciamento, o que torna o mercado sensível a mudanças.</p></details>
+  <details><summary>As baterias de lítio podem ser recicladas?</summary><p>Sim. A reciclagem recupera lítio, níquel, cobalto e outros materiais. É uma área em crescimento, com processos mais eficientes a cada ano, e reduz a necessidade de nova extração.</p></details>
+  <details><summary>O que é o sódio-íon e ele substitui o lítio?</summary><p>É uma tecnologia que usa sódio, um elemento muito abundante. Tende a ser mais barata e menos dependente de minerais críticos, mas ainda tem menor densidade de energia. Deve complementar o lítio em vez de substituí-lo totalmente.</p></details>
+  <details><summary>Vale a pena instalar bateria em casa com energia solar?</summary><p>Depende do consumo, da tarifa de energia, do clima e do custo da instalação. Use o simulador deste site para estimar a capacidade necessária e consulte um profissional habilitado antes de decidir.</p></details>
+</div></section>
+
+<section id="glossario" class="alt"><div class="wrap">
+  <h2>Glossário</h2>
+  <input class="busca" id="busca" type="search" placeholder="Buscar um termo, por exemplo: cátodo, espodumênio, ciclo" aria-label="Buscar no glossário">
+  <div class="termos" id="termos"></div>
+</div></section>
+
+<section id="quiz"><div class="wrap">
+  <h2>Teste seus conhecimentos</h2>
+  <p class="lead">Cinco perguntas rápidas sobre lítio e energia.</p>
+  <div class="caixa" style="max-width:720px;margin-top:24px">
+    <div id="quizbox"></div>
+  </div>
+</div></section>
+
+<section id="fontes" class="alt"><div class="wrap">
+  <h2>Fontes</h2>
+  <ol class="fontes">
+    <li>Confea, "Vale do Jequitinhonha se firma como polo brasileiro do lítio" (set/2026).</li>
+    <li>Movimento Econômico, "NE avança com lítio e níquel, mas Brasil perde espaço em minerais críticos" (dez/2025).</li>
+    <li>Agência Minas e Startups, lançamento do Vale do Lítio (Lithium Valley Brazil).</li>
+    <li>Dialogue Earth, "'Vale do Lítio': Novo polo da mineração do Brasil desperta preocupações locais".</li>
+    <li>Revista RSD, "Extração de lítio nos municípios de Itinga e Araçuaí no Vale do Jequitinhonha".</li>
+    <li>Estado de Minas, reportagens sobre o Vale do Jequitinhonha e a produção de lítio.</li>
+    <li>Fundação Nobel, premiação de Química de 2019.</li>
+  </ol>
+  <p class="pequeno">Este conteúdo é informativo e não constitui recomendação de investimento ou de compra.</p>
+</div></section>
+
+<section id="contato"><div class="wrap duas">
+  <div>
+    <h2>Fale conosco</h2>
+    <p class="lead">Sugestões de conteúdo, parcerias ou dúvidas técnicas. Respondemos com base em fontes verificáveis.</p>
+    <p class="pequeno">Responsável: Guilherme Morais Nascimento, <a href="mailto:guilhermenascimento867@gmail.com">guilhermenascimento867@gmail.com</a></p>
+  </div>
+  <form class="caixa form" id="form">
+    <label>Nome<input name="nome" required autocomplete="name"></label>
+    <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+    <label>Assunto<select name="assunto"><option>Dúvida técnica</option><option>Sugestão de conteúdo</option><option>Parceria</option><option>Imprensa</option></select></label>
+    <label>Mensagem<textarea name="mensagem" rows="4" required></textarea></label>
+    <div class="formfoot">
+      <label class="lgpd"><input type="checkbox" name="consent" required> Autorizo o uso dos meus dados apenas para responder esta mensagem, conforme a LGPD.</label>
+    </div>
+    <div class="formfoot"><button class="botao" type="submit">Enviar</button><span id="retorno" class="pequeno" role="status"></span></div>
+  </form>
+</div></section>
+</main>
+
+<footer class="rodape"><div class="wrap">
+  <p><b>litioenergia.com.br</b></p>
+  <p>Conteúdo informativo. Não substitui orientação profissional de engenharia, finanças ou saúde.</p>
+  <p>Site criado por <b>Guilherme Morais Nascimento</b>, <a href="mailto:guilhermenascimento867@gmail.com">guilhermenascimento867@gmail.com</a></p>
+</div></footer>
+
+<button class="voltar" id="voltar" aria-label="Voltar ao topo">↑ Topo</button>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt = (n) => Number(n).toLocaleString("pt-BR", { maximumFractionDigits: 0 });
+
+/* Simulador 1: autonomia do carro */
+function autonomia() {
+  const cb = +$("cb").value, cc = +$("cc").value, cr = +$("cr").value;
+  $("cbv").textContent = cb + " kWh";
+  $("ccv").textContent = cc + " kWh/100 km";
+  $("crv").textContent = cr + "% de reserva";
+  const util = cb * (1 - cr / 100);
+  $("util").textContent = util.toFixed(1).replace(".", ",");
+  $("auto").textContent = fmt((util / cc) * 100) + " km";
+}
+/* Simulador 2: bateria residencial */
+function bateria() {
+  const sc = +$("sc").value, sd = +$("sd").value, sp = +$("sp").value;
+  $("scv").textContent = sc.toFixed(1).replace(".", ",") + " kWh/dia";
+  $("sdv").textContent = sd + (sd === 1 ? " dia" : " dias");
+  $("spv").textContent = sp + "% de profundidade";
+  const kwh = (sc * sd) / (sp / 100);
+  $("bat").textContent = kwh.toFixed(1).replace(".", ",") + " kWh";
+  $("cus").textContent = "R$ " + fmt(kwh * 2000);
+}
+["cb","cc","cr"].forEach((i) => $(i).addEventListener("input", autonomia));
+["sc","sd","sp"].forEach((i) => $(i).addEventListener("input", bateria));
+autonomia(); bateria();
+
+/* Glossário */
+const TERMOS = [
+  ["Ânodo", "Eletrodo em que os íons de lítio são armazenados durante a carga. Em muitas baterias é feito de grafite."],
+  ["Cátodo", "Eletrodo que libera os íons de lítio na descarga. Sua composição define a química da bateria (NMC, LFP etc.)."],
+  ["Ciclo", "Uma carga completa seguida de uma descarga. A vida útil de uma bateria costuma ser medida em ciclos."],
+  ["Densidade de energia", "Quantidade de energia armazenada por unidade de massa ou volume. Define a autonomia de carros e aparelhos."],
+  ["Eletrólito", "Meio que permite a passagem dos íons entre os eletrodos."],
+  ["Espodumênio", "Mineral rico em lítio, a principal fonte do concentrado produzido em Minas Gerais."],
+  ["Estado sólido", "Tecnologia em que o eletrólito líquido é substituído por um material sólido. Em desenvolvimento."],
+  ["LFP", "Lítio-ferro-fosfato. Química mais estável e sem cobalto, comum em armazenamento e carros de entrada."],
+  ["Pegmatito", "Tipo de rocha ígnea de granulação grossa, uma das fontes de lítio mais exploradas."],
+  ["Profundidade de descarga (DoD)", "Percentual da capacidade usada em cada ciclo. Afeta a vida útil da bateria."],
+  ["Salmoura", "Água rica em sais dissolvida no subsolo, de onde o lítio pode ser extraído por evaporação."],
+  ["Sódio-íon", "Bateria que usa sódio em vez de lítio. Mais abundante, com menor densidade de energia."],
+  ["Taxa C", "Velocidade de carga ou descarga em relação à capacidade. Por exemplo, 1C descarrega a bateria em uma hora."]
+];
+function renderTermos(filtro = "") {
+  const f = filtro.toLowerCase();
+  const lista = TERMOS.filter(([t, d]) => (t + " " + d).toLowerCase().includes(f));
+  $("termos").innerHTML = lista.length
+    ? lista.map(([t, d]) => `<div class="termo"><b>${t}</b><p>${d}</p></div>`).join("")
+    : '<p class="pequeno">Nenhum termo encontrado.</p>';
+}
+$("busca").addEventListener("input", (e) => renderTermos(e.target.value));
+renderTermos();
+
+/* Quiz */
+const PERGUNTAS = [
+  { q: "Quem recebeu o Nobel de Química de 2019 pelas baterias de lítio?", o: ["Marie Curie", "John Goodenough, Whittingham e Yoshino", "Alfred Nobel"], c: 1, x: "Os três pesquisadores foram premiados pelo desenvolvimento das baterias de íon-lítio." },
+  { q: "Qual química de bateria é mais segura e não usa cobalto?", o: ["NMC", "LFP", "Chumbo-ácido"], c: 1, x: "A lítio-ferro-fosfato (LFP) é mais estável e não depende de cobalto." },
+  { q: "Em qual estado fica a maior parte da produção brasileira de lítio?", o: ["Bahia", "Minas Gerais", "Goiás"], c: 1, x: "A produção está concentrada no Vale do Jequitinhonha, em Minas Gerais." },
+  { q: "Qual é a etapa da cadeia com mais geração de empregos qualificados?", o: ["Extração", "Refino e fabricação de baterias", "Transporte"], c: 1, x: "As etapas de refino e fabricação concentram mais valor e empregos especializados." },
+  { q: "O que a profundidade de descarga (DoD) afeta?", o: ["A cor da bateria", "A vida útil da bateria", "O preço do lítio"], c: 1, x: "Descarregar mais a bateria em cada ciclo tende a reduzir sua vida útil." }
+];
+let qi = 0, acertos = 0;
+function renderQuiz() {
+  const box = $("quizbox");
+  if (qi >= PERGUNTAS.length) {
+    box.innerHTML = `<p class="quiz-pergunta">Você acertou ${acertos} de ${PERGUNTAS.length}.</p><button class="botao" id="reiniciar">Refazer</button>`;
+    $("reiniciar").onclick = () => { qi = 0; acertos = 0; renderQuiz(); };
+    return;
+  }
+  const p = PERGUNTAS[qi];
+  box.innerHTML = `<p class="pequeno">Pergunta ${qi + 1} de ${PERGUNTAS.length}</p><p class="quiz-pergunta">${p.q}</p><div class="opcoes">${p.o.map((t, i) => `<button class="opcao" data-i="${i}">${t}</button>`).join("")}</div><p class="feedback" id="fb"></p><button class="botao" id="prox" disabled>Próxima</button>`;
+  box.querySelectorAll(".opcao").forEach((b) => b.addEventListener("click", () => {
+    const i = +b.dataset.i;
+    box.querySelectorAll(".opcao").forEach((x) => (x.disabled = true));
+    if (i === p.c) { b.classList.add("certa"); acertos++; $("fb").textContent = "Correto. " + p.x; }
+    else { b.classList.add("errada"); box.querySelectorAll(".opcao")[p.c].classList.add("certa"); $("fb").textContent = "Não foi dessa vez. " + p.x; }
+    $("prox").disabled = false;
+  }));
+  $("prox").onclick = () => { qi++; renderQuiz(); };
+}
+renderQuiz();
+
+/* Tema */
+const R = document.documentElement;
+try { const s = localStorage.getItem("litio-tema"); if (s) R.dataset.tema = s; } catch (e) {}
+$("tema").addEventListener("click", () => {
+  const escuro = R.dataset.tema ? R.dataset.tema === "escuro" : matchMedia("(prefers-color-scheme: dark)").matches;
+  R.dataset.tema = escuro ? "claro" : "escuro";
+  try { localStorage.setItem("litio-tema", R.dataset.tema); } catch (e) {}
+});
+
+/* Voltar ao topo */
+addEventListener("scroll", () => $("voltar").classList.toggle("on", scrollY > 600));
+$("voltar").addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+
+/* Formulário (abre e-mail, sem backend) */
+$("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const corpo = `Nome: ${f.get("nome")}\nE-mail: ${f.get("email")}\nAssunto: ${f.get("assunto")}\n\n${f.get("mensagem")}`;
+  location.href = `mailto:guilhermenascimento867@gmail.com?subject=${encodeURIComponent("[litioenergia] " + f.get("assunto"))}&body=${encodeURIComponent(corpo)}`;
+  $("retorno").textContent = "Abrimos seu e-mail com a mensagem.";
+});
+</script>
+</body>
+</html>
